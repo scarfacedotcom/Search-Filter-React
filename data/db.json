@@ -1,0 +1,62 @@
+{
+  "users":[
+    {
+      "serial_number": "1",
+      "name": "longs",
+      "gender":"male",
+      "age": "67",
+      "country":"canada",
+      "fav_lang":"java script",
+      "student": "yes"
+    },
+    {
+      "serial_number": "2",
+      "name": "peter",
+      "gender":"male",
+      "age": "47",
+      "country":"spain",
+      "fav_lang":"react js",
+      "student": "yes"
+    },
+    {
+      "serial_number": "3",
+      "name": "satoshi",
+      "gender":"male",
+      "age": "99",
+      "country":"brazil",
+      "fav_lang":"solidity",
+      "student": "no",
+      "id": "1"
+    },
+    {
+      "serial_number": "4",
+      "name": "favour",
+      "gender":"female",
+      "age": "23",
+      "country":"usa",
+      "fav_lang":"python",
+      "student": "no",
+      "id": "2"
+    },
+    {
+      "serial_number": "5",
+      "name": "mabel",
+      "gender":"female",
+      "age": "87",
+      "country":"england",
+      "fav_lang":"java",
+      "student": "no",
+      "id": "3"
+    },
+    {
+      "serial_number": "6",
+      "name": " joyce",
+      "gender":"male",
+      "age": "12",
+      "country":"portugal",
+      "fav_lang":"pyscript",
+      "student": "yes",
+      "id": "4"
+    }
+  ]
+}

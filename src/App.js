@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react'
+import UserList from './components/UserList';
 import './App.css';
 
 function App() {
+  const [users, setUsers] = useState([])
+  const [searchText, setSearchText] = useState("")
+
+  useEffect(() => {
+    fetch('http://localhost:3000/users')
+      .then(response => response.json())
+      .then(json => setUsers(json))
+  }, [])
+
+  const handleChange = value => {
+    setSearchText(value)
+  }
+
+  const filterUsers = users.filter(user => {
+    return Object.keys(user).some(key => {
+      return user[key].toString().toLowerCase().includes(searchText);
+    })
+  });
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input 
+      type="text" 
+      placeholder='Search...' 
+      value = {searchText}
+      onChange={e => handleChange(e.target.value)}
+      />
+      <UserList users={filterUsers}/>
     </div>
   );
 }
